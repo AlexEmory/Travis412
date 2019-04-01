@@ -21,6 +21,18 @@ public class SimpleCalculatorTest {
 	public void testMinus() {
 		assertEquals(2, calc.minus(5,3));
 	}
+	@Test
+	public void testMultiply() {
+		assertEquals(12, calc.multiply(3,4));
+	}
+	@Test
+	public void testDivide1() {
+		assertTrue( calc.divide(16, 2)==8);
+	}
+	@Test
+	public void testDivide2() {
+		assertTrue(calc.divide(12, 0)==-1);
+	}
 	@After
 	public void tearDown() {
 		calc=null;
